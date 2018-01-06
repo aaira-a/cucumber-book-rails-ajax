@@ -9,6 +9,6 @@ When(/^I visit the page for the User$/) do
   expect(User.count).to eq 1
   visit(user_path(User.first))
 end
-Then(/^I should see "([^"]*)"$/) do |arg1|
-  pending # Write code here that turns the phrase above into concrete actions
+Then(/^I should see "([^"]*)"$/) do |text|
+  expect(page).to have_content(text)
 end
