@@ -6,7 +6,8 @@ Given(/^the User has posted the message "([^"]*)"$/) do |message_text|
   FactoryGirl.create(:message, :content => message_text, :user => User.first)
 end
 When(/^I visit the page for the User$/) do
-  pending # Write code here that turns the phrase above into concrete actions
+  expect(User.count).to eq 1
+  visit(user_path(User.first))
 end
 Then(/^I should see "([^"]*)"$/) do |arg1|
   pending # Write code here that turns the phrase above into concrete actions
