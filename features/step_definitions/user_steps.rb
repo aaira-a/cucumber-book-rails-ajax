@@ -1,5 +1,5 @@
 Given(/^there is a User$/) do
-  pending # Write code here that turns the phrase above into concrete actions
+  FactoryGirl.create(:user)
 end
 Given(/^the User has posted the message "([^"]*)"$/) do |arg1|
   pending # Write code here that turns the phrase above into concrete actions
